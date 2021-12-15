@@ -28,9 +28,13 @@
 
 ### **_Screenshots_**
 
-##### Funny Images: [Local Eyes CHD](./screengrabs/localEyesCHD.pdf)
+##### CHD:
 
-##### Funny Images: [Local Eyes ERD](./screengrabs/localEyesERD.pdf)
+![Local Eyes CHD](./screengrabs/localEyesCHD.jpg)
+
+##### ERD:
+
+![Local Eyes ERD](./screengrabs/localEyesERD.jpg)
 
 ---
 
