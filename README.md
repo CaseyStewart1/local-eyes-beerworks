@@ -20,12 +20,6 @@
 
 ### Getting Started
 
-#### trello:
-
-#### ERD:
-
-#### CHD
-
 ---
 
 ### **_Screenshots_**
