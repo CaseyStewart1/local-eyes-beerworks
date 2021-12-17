@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
-import blockLogo from './images/Local_block.jpeg';
+
 import NavGuide from './components/NavGuide';
 import Home from './components/Home';
 import Find from './components/Find';
@@ -35,7 +35,7 @@ function App() {
       ibu: '60'
     },
     {
-      name: 'ustainable meggings',
+      name: 'Unsustainable meggings',
       style: 'TIPA',
       description: 'sustainable meggings YOLO jean shorts vice pop-up.',
       img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.gettyimages.com%2Fvectors%2Fbeer-glass-icon-iweb-sign-symbol-logo-label-vector-id527900172%3Fb%3D1%26k%3D6%26m%3D527900172%26s%3D170x170%26h%3DMqOjCfcW3PXEwKbFfhI9pDQwhvPWMHQzQntxfJyceA8%3D&f=1&nofb=1',
@@ -65,7 +65,6 @@ function App() {
   return (
     <div className="App">
       <header>
-        <img src={blockLogo} alt="blockLogo" width="600px" />
         <NavGuide />
       </header>
       <main>
@@ -78,6 +77,7 @@ function App() {
         />
         <Route exact path="/visit" component={Find} />
       </main>
+      <footer></footer>
     </div>
   );
 }
