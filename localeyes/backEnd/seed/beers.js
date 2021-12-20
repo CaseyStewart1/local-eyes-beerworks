@@ -1,5 +1,5 @@
 const db = require('../db');
-const Beer = require('../models/beer');
+const Beer = require('../models/beer.js');
 
 db.on('error', console.error.bind(console.error, ' bad connection'));
 
@@ -15,7 +15,14 @@ const main = async () => {
         'Crisp, malt-forward and flavorful lager.  Light bitterness with a touch of spice, melon, and berry from Saaz and Huell Melon hops.  Very easy drinking.'
     },
 
-    { name: 'Asylum', style: 'DIPA', abv: '8.6%', ibu: '95', description: '' },
+    {
+      name: 'Asylum',
+      style: 'DIPA',
+      abv: '8.6%',
+      ibu: '95',
+      onTap: false,
+      description: ''
+    },
 
     {
       name: 'When Berry Meets Beery',
@@ -302,5 +309,3 @@ const run = async () => {
 };
 
 run();
-
-// {name: , style: , abv: , ibu: , description: },

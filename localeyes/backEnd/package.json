@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^6.1.2"
+    "mongoose": "^6.1.2",
+    "mongosh": "^1.1.7"
   },
   "description": ""
 }
