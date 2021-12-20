@@ -34,8 +34,40 @@ const getBeerById = async (req, res) => {
   }
 };
 
+const updateBeer = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await Beer.findByIdAndUpdate(id, req.body, { new: true }, (err, beer) => {
+      if (err) {
+        res.status(500).send(err);
+      }
+      if (!beer) {
+        res.status(200).send('No Beer');
+      }
+      return res.status(200).json(beer);
+    });
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
+
+const deleteBeer = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleted = await Beer.findByIdAndDelete(id);
+    if (deleted) {
+      return res.status(200).send('Beer Gone');
+    }
+    throw new Error('Beer ran dry');
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
+
 module.exports = {
   createBeer,
   getAllBeers,
-  getBeerById
+  getBeerById,
+  updateBeer,
+  deleteBeer
 };
