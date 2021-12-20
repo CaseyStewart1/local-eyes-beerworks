@@ -7,6 +7,7 @@ const Beer = new Schema(
     style: { type: String, required: true },
     abv: { type: String, required: true },
     ibu: { type: String, required: true },
+    onTape: { type: Boolean, required: true },
     description: { type: String, required: false }
   },
   { timestamps: true }
