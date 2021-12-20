@@ -31,7 +31,6 @@ header {
 .descriptor {
   display: flex;
   flex-direction: row;
-  background-color: rgb(63, 59, 58);
   justify-content: space-around;
 }
 
@@ -46,6 +45,7 @@ header {
 .bottomRow {
   display: flex;
   justify-content: space-around;
+
   background-color: rgb(238, 219, 159);
 }
 
@@ -92,7 +92,7 @@ footer {
 }
 
 .homeTapPhoto {
-  width: 10%;
+  align-items: center;
 }
 
 .aboutTop {

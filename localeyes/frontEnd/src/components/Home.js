@@ -28,7 +28,10 @@ function Home() {
         </div>
       </div>
       <div className="homeTapPhoto">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Farch-elements.com%2Fwp-content%2Fuploads%2F2019%2F10%2FAE-Trailbend-decorative-metals-24.jpg&f=1&nofb=1" />
+        <img
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Farch-elements.com%2Fwp-content%2Fuploads%2F2019%2F10%2FAE-Trailbend-decorative-metals-24.jpg&f=1&nofb=1"
+          width="1000vw"
+        />
       </div>
     </div>
   );

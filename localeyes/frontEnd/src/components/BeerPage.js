@@ -42,13 +42,16 @@ function BeerPage(props) {
             </div>
           </div>
         ))}
+        <div className="educationBP">
+          <h1>Tell me more about your Crispy Suds...</h1>
+          <div className="leftColumnBP">
+            <h2>Ales</h2>
+          </div>
+          <div className="rightColumnBP">
+            <h2>Lagers</h2>
+          </div>
+        </div>
       </div>
-
-      <h3>link to lower down the page to "Beers have style?"</h3>
-      <h3>rotating list beers on tap</h3>
-      <h1>Beer Styles</h1>
-      <h3>2 Types of beer: Ales and Lagers</h3>
-      <h4>everything else that falls under one or the other</h4>
     </div>
   );
 }
