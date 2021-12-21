@@ -1,13 +1,11 @@
 import React from 'react';
-import beerGlass from './images/beerGlass.jpeg';
+import beerGlass from './images/nounBeer.png';
 
 function BeerPage(props) {
   return (
     <div className="beerPage">
-      <h1>The important things in life...</h1>
-      <h3>Whats on tap?</h3>
-
       <div className="beerCardContainer">
+        <h1>Crispy Suds on Tap</h1>
         {props.beers.map((beer) => (
           <div className="beerCard">
             <div className="titleRow">
