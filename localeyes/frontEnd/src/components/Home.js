@@ -19,7 +19,7 @@ function Home() {
           <h6>Sunday || 4 - 10pm</h6>
         </div>
         <div className="rightColumn">
-          <h3>The city shines in the light of local eyes</h3>
+          <h3>"The city shines from the light of local eyes"</h3>
           <p>
             Welcome to the neighborhood! We're passionate about building up our
             neighbors and strengthing our community by creating a place for all

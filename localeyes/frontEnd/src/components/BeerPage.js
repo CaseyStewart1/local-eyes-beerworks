@@ -1,4 +1,5 @@
 import React from 'react';
+import beerGlass from './images/beerGlass.jpeg';
 
 function BeerPage(props) {
   return (
@@ -19,7 +20,7 @@ function BeerPage(props) {
             </div>
             <div className="descriptor">
               <div className="beerImg">
-                <img src={beer.img} alt={beer.name} />
+                <img src={beerGlass} alt={beer.name} />
               </div>
               <div className="beerDes">
                 <p>{beer.description}</p>
@@ -33,12 +34,7 @@ function BeerPage(props) {
                   <p>{beer.abv}</p>{' '}
                 </span>
               </div>
-              <div className="beerIBU">
-                <span>
-                  <h6>IBU</h6>
-                  <p>{beer.ibu}</p>
-                </span>
-              </div>
+              <div className="beerIBU"></div>
             </div>
           </div>
         ))}

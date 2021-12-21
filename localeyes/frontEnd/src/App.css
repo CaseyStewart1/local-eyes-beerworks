@@ -39,14 +39,11 @@ header {
   flex-direction: row;
   align-items: baseline;
   justify-content: space-around;
-  background-color: rgb(212, 188, 154);
 }
 
 .bottomRow {
   display: flex;
   justify-content: space-around;
-
-  background-color: rgb(238, 219, 159);
 }
 
 .navButton {
