@@ -1,7 +1,18 @@
 import React from 'react';
 import beerGlass from './images/nounBeer.png';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 function BeerPage(props) {
+  const [del, setDel] = useState();
+  async function deleteBeer(id) {
+    await axios.delete(`http://localhost:3001/api/beers/${id}`);
+    setDel('Delete Done');
+    // windows.location.reload;
+  }
+  useEffect(() => {}, [deleteBeer]);
+
   return (
     <div className="beerPage">
       <div className="beerCardContainer">
@@ -18,24 +29,33 @@ function BeerPage(props) {
             </div>
             <div className="descriptor">
               <div className="beerImg">
-                <img src={beerGlass} alt={beer.name} />
+                <img src={beerGlass} alt={beer.name} height={'200px'} />
               </div>
               <div className="beerDes">
                 <p>{beer.description}</p>
               </div>
             </div>
             <div className="bottomRow">
-              <div className="beerABV">
-                <span>
-                  {' '}
-                  <h6>ABV</h6>
-                  <p>{beer.abv}</p>{' '}
-                </span>
-              </div>
-              <div className="beerIBU"></div>
+              <span>
+                {' '}
+                <h6>ABV</h6>
+                <p>{beer.abv}</p>{' '}
+              </span>
+              <Link to="/updatebeer">
+                {' '}
+                <button>Update</button>{' '}
+              </Link>
+              <button
+                onClick={() => {
+                  deleteBeer(beer._id);
+                }}
+              >
+                Delete
+              </button>
             </div>
           </div>
         ))}
+
         <div className="educationBP">
           <h1>Tell me more about your Crispy Suds...</h1>
           <div className="leftColumnBP">
@@ -51,14 +71,3 @@ function BeerPage(props) {
 }
 
 export default BeerPage;
-
-// {props.beers.map((beer) => (
-//   <div className="beerCard">
-//     <img height={'100px'} src={beer.img} alt={beer.name} />
-//     <h3>{beer.name}</h3>
-//     <h5>{beer.description}</h5><div className='smallInfo'>
-//     <h6>Style</h6>
-//       <h6>ABV</h6>
-//       <h6>IBU</h6>
-//     </div>
-//   </div>

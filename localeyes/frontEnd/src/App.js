@@ -8,6 +8,7 @@ import Home from './components/Home';
 import Find from './components/Find';
 import About from './components/About';
 import BeerPage from './components/BeerPage';
+import UpdateBeer from './components/UpdateBeer';
 
 function App() {
   // const beers = [
@@ -72,8 +73,6 @@ function App() {
     getBeers();
   }, []);
 
-  console.log(beers);
-
   return (
     <div className="App">
       <header>
@@ -88,6 +87,11 @@ function App() {
           component={(props) => <BeerPage {...props} beers={beers} />}
         />
         <Route exact path="/visit" component={Find} />
+        <Route
+          exact
+          path="/updatebeer"
+          component={(props) => <UpdateBeer {...props} beers={beers} />}
+        />
       </main>
       <footer></footer>
     </div>
