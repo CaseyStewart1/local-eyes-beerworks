@@ -65,6 +65,29 @@ function App() {
   // ];
   const [beers, setBeers] = useState([]);
 
+  const [beerData, setBeerData] = useState([]);
+  const [newBeer, setNewBeer] = useState({
+    name: '',
+    style: '',
+    decription: ''
+  });
+
+  const handleNewBeer = (e) => {
+    setNewBeer({ ...newBeer, [e.target.name]: e.target.value });
+  };
+
+  const addBeer = (e) => {
+    e.preventDefault();
+    const currentBeers = beerData;
+    const addedBeer = {
+      ...newBeer,
+      id: parseInt(beerData.length + 1)
+    };
+    currentBeers.push(addedBeer);
+    setBeerData(currentBeers);
+    setNewBeer({ id: '', name: '', style: '', description: '' });
+  };
+
   useEffect(() => {
     async function getBeers() {
       const res = await axios.get(`http://localhost:3001/api/beers`);
@@ -91,11 +114,13 @@ function App() {
         <Route
           exact
           path="/suggestBeer"
-          component={(props) => <SuggestBeer {...props} beers={beers} />}
+          component={(props) => (
+            <SuggestBeer {...props} beers={beers} addBeer={addBeer} />
+          )}
         />
         <Route
           exact
-          path="/updatebeer"
+          path="/updatebeer/:id"
           component={(props) => <UpdateBeer {...props} beers={beers} />}
         />
       </main>

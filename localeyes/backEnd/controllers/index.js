@@ -2,13 +2,14 @@ const Beer = require('../models/beer');
 
 const suggestBeer = async (req, res) => {
   try {
+    console.log('hi');
     const beer = await new Beer(req.body);
     await beer.save();
-    return res.status(201).json({
+    res.status(201).send({
       beer
     });
   } catch (error) {
-    return res.status(500).json({ error: error.message });
+    // return res.status(500).json({ error: error.message });
   }
 };
 
@@ -35,14 +36,15 @@ const getBeerById = async (req, res) => {
 };
 
 const updateBeer = async (req, res) => {
+  console.log('hihi there', req.body);
   try {
     const { id } = req.params;
-    await Beer.findByIdAndUpdate(id, req.body, { new: true }, (err, beer) => {
+    Beer.findByIdAndUpdate(id, req.body, { new: true }, (err, beer) => {
       if (err) {
-        res.status(500).send(err);
+        // res.status(500).send(err);
       }
       if (!beer) {
-        res.status(200).send('No Beer');
+        // res.status(200).send('No Beer');
       }
       return res.status(200).json(beer);
     });

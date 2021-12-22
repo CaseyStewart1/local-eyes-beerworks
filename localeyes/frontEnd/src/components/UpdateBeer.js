@@ -2,48 +2,69 @@ import react, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function UpdateBeer(props) {
-  console.log(props);
+  const id = props.match.params.id;
+  console.log(props.match.params.id);
   const [updateBeer, setUpdateBeer] = useState();
-  async function changeBeer(id) {
-    await axios.put(`http://localhost:3001/api/beers/${id}`);
-    setUpdateBeer('changes made');
-    window.location.reload();
-  }
-  useEffect(() => {}, [changeBeer]);
+
+  useEffect(() => {
+    const useEf = async () => {
+      const result = await axios.get(`http://localhost:3001/api/beers/${id}`);
+      const beerObject = result.data.beer;
+      console.log(beerObject);
+      setUpdateBeer(beerObject);
+    };
+    useEf();
+  }, []);
+
+  const handleSubmit = async () => {
+    console.log('hey', updateBeer);
+    await axios
+      .put(`http://localhost:3001/api/beers/${id}`, updateBeer)
+      .then((res) => console.log(res.data.beer))
+      .catch((error) => alert(error));
+    props.history.push('/beersbeersbeers');
+  };
 
   return (
     <div>
-      {/* <form onSubmit={changeBeer}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text-area"
-          // value={beer.name}
-          onChange={props.handleBeerUpdate}
+          onChange={(e) => {
+            setUpdateBeer({
+              ...updateBeer,
+              name: e.target.value
+            });
+          }}
           name={'name'}
-          placeholder={'Name'}
+          placeholder={'name'}
         />
         <input
           type="text-area"
-          value={beer.description}
-          onChange={props.handleBeerUpdate}
-          description={'description'}
-          placeholder={'Description'}
+          onChange={(e) => {
+            setUpdateBeer({
+              ...updateBeer,
+              style: e.target.value
+            });
+          }}
+          name={'style'}
+          placeholder={'style'}
         />
         <input
           type="text-area"
-          value={beer.abv}
-          onChange={props.handleBeerUpdate}
-          abv="abv"
-          placeholder="abv"
+          onChange={(e) => {
+            setUpdateBeer({
+              ...updateBeer,
+              description: e.target.value
+            });
+          }}
+          name={'description'}
+          placeholder={'description'}
         />
-        <input
-          type="text-area"
-          value={beer.name}
-          onChange={props.handleBeerUpdate}
-          onTap="onTap"
-          placeholder="on tap?"
-        />
-        <button onCLick={UpdateBeer}>Submit</button>
-      </form> */}
+
+        <button onClick={handleSubmit}>Submit</button>
+      </form>
+
       <h1>here</h1>
     </div>
   );

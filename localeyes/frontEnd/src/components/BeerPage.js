@@ -40,13 +40,11 @@ function BeerPage(props) {
             </div>
             <div className="bottomRow">
               <span>
-                {' '}
                 <h6>ABV</h6>
-                <p>{beer.abv}</p>{' '}
+                <p>{beer.abv}</p>
               </span>
-              <Link to="/updatebeer">
-                {' '}
-                <button>Update</button>{' '}
+              <Link to={`/updatebeer/${beer._id}`}>
+                <button>Update</button>
               </Link>
               <button
                 onClick={() => {

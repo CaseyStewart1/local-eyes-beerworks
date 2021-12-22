@@ -12,7 +12,8 @@ const main = async () => {
       ibu: '15',
       onTap: true,
       description:
-        'Crisp, malt-forward and flavorful lager.  Light bitterness with a touch of spice, melon, and berry from Saaz and Huell Melon hops.  Very easy drinking.'
+        'Crisp, malt-forward and flavorful lager.  Light bitterness with a touch of spice, melon, and berry from Saaz and Huell Melon hops.  Very easy drinking.',
+      likes: 2
     },
 
     {
@@ -21,7 +22,8 @@ const main = async () => {
       abv: '8.6%',
       ibu: '95',
       onTap: false,
-      description: ''
+      description: '',
+      likes: 2
     },
 
     {
@@ -31,7 +33,8 @@ const main = async () => {
       ibu: '15',
       onTap: true,
       description:
-        'Pours a beautiful pink / ruby red color.  Rich aroma of tart strawberry with a pleasant combination of malt and strawberry flavor.  You will love it.  Like strawberry frosted mini-wheats'
+        'Pours a beautiful pink / ruby red color.  Rich aroma of tart strawberry with a pleasant combination of malt and strawberry flavor.  You will love it.  Like strawberry frosted mini-wheats',
+      likes: 2
     },
 
     {
@@ -41,7 +44,8 @@ const main = async () => {
       ibu: '15',
       onTap: true,
       description:
-        'A dark red, almost purple color.  Smells of chocolate covered strawberries and tastes like it too.  A Valentines Day treat.'
+        'A dark red, almost purple color.  Smells of chocolate covered strawberries and tastes like it too.  A Valentines Day treat.',
+      likes: 2
     },
     {
       name: 'Bohemian Grove',
@@ -49,7 +53,8 @@ const main = async () => {
       abv: '4.9%',
       ibu: '38',
       onTap: false,
-      description: ''
+      description: '',
+      likes: 2
     },
     {
       name: 'Father Time',
@@ -57,7 +62,8 @@ const main = async () => {
       abv: '12.4%',
       ibu: '50',
       onTap: false,
-      description: ''
+      description: '',
+      likes: 2
     },
     {
       name: 'Holiday Ale',
@@ -65,7 +71,8 @@ const main = async () => {
       abv: '5%',
       ibu: '28',
       onTap: false,
-      description: ''
+      description: '',
+      likes: 2
     },
     {
       name: `It'll be Good`,
@@ -73,7 +80,8 @@ const main = async () => {
       abv: '8%',
       ibu: '55',
       onTap: true,
-      description: `Pours hazy / honey color with a thick head. Bold aroma of melon and orange zest leads into intense grapefruit, stone fruit, and evergreen.  This DDH Double IPA has a revamped hop bill.  It's a hop head's dream.`
+      description: `Pours hazy / honey color with a thick head. Bold aroma of melon and orange zest leads into intense grapefruit, stone fruit, and evergreen.  This DDH Double IPA has a revamped hop bill.  It's a hop head's dream.`,
+      likes: 2
     },
     {
       name: `Dick's Irish Stout`,
@@ -81,7 +89,8 @@ const main = async () => {
       abv: '4.1%',
       ibu: '32',
       onTap: true,
-      description: `Pours black / deep ruby color with a tight tan head.  Aroma and flavor of coffee, toffee, roasted malts, and dark chocolate.  Light body and soft carbonation contribute to a very drinkable Irish Stout.`
+      description: `Pours black / deep ruby color with a tight tan head.  Aroma and flavor of coffee, toffee, roasted malts, and dark chocolate.  Light body and soft carbonation contribute to a very drinkable Irish Stout.`,
+      likes: 2
     },
     {
       name: 'Grand Bru',
@@ -89,7 +98,8 @@ const main = async () => {
       abv: '10.4%',
       ibu: '20',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: 'Muscles From Brussels',
@@ -97,7 +107,8 @@ const main = async () => {
       abv: '8.6%',
       ibu: '30',
       onTap: true,
-      description: `Pours a rich golden color with a slight haze and fluffy head. Classic Belgian character brings a banana ester nose and clove phenols in the flavor along with some malty sweetness.  This Belgian strong ale is deceptively drinkable, but just might roundhouse kick winter in the face!`
+      description: `Pours a rich golden color with a slight haze and fluffy head. Classic Belgian character brings a banana ester nose and clove phenols in the flavor along with some malty sweetness.  This Belgian strong ale is deceptively drinkable, but just might roundhouse kick winter in the face!`,
+      likes: 2
     },
     {
       name: `Now It's a Blonde`,
@@ -105,7 +116,8 @@ const main = async () => {
       abv: '4.6%',
       ibu: '15',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `Summer Solstice`,
@@ -113,7 +125,8 @@ const main = async () => {
       abv: '4.7%',
       ibu: '8',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `Sun Medallion`,
@@ -121,7 +134,8 @@ const main = async () => {
       abv: '5.2%',
       ibu: '30',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `Wutang Sour`,
@@ -129,7 +143,8 @@ const main = async () => {
       abv: '6.2%',
       ibu: '4',
       onTap: false,
-      description: `Hazy Kettle Sour with a heavy dose of tangerine puree added near the end of fermentation.  Tart, citrusy, and refreshing!`
+      description: `Hazy Kettle Sour with a heavy dose of tangerine puree added near the end of fermentation.  Tart, citrusy, and refreshing!`,
+      likes: 2
     },
     {
       name: `Deep Sea Downeast`,
@@ -137,7 +152,8 @@ const main = async () => {
       abv: '5.7%',
       ibu: '54',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `Drop it`,
@@ -145,7 +161,8 @@ const main = async () => {
       abv: '5%',
       ibu: '18',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `From The Isle`,
@@ -153,7 +170,8 @@ const main = async () => {
       abv: '7.7%',
       ibu: '25',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `Goat Ribs`,
@@ -161,7 +179,8 @@ const main = async () => {
       abv: '7.7%',
       ibu: '20',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `Pale Moonlight`,
@@ -169,7 +188,8 @@ const main = async () => {
       abv: '5.1%',
       ibu: '12',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `Our Own Private Idaho`,
@@ -177,7 +197,8 @@ const main = async () => {
       abv: '5%',
       ibu: '15',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `Pink Pants`,
@@ -185,7 +206,8 @@ const main = async () => {
       abv: '7.7%',
       ibu: '51',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `Riser 7`,
@@ -193,7 +215,8 @@ const main = async () => {
       abv: '4.5%',
       ibu: '40',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `Spruced UP!`,
@@ -201,7 +224,8 @@ const main = async () => {
       abv: '5.7%',
       ibu: '60',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `Isle of White`,
@@ -209,7 +233,8 @@ const main = async () => {
       abv: '6.7%',
       ibu: '45',
       onTap: true,
-      description: `A delightful mash up of styles - the floral and citrus hoppy notes of an IPA and the coriander and orange peel associated with witbeers.  Pours pale and moderately hazy with a full white head.  A soft mouthfeel from a generous additon of Wheat malt make this IPA very approchable to a variety of beer lovers`
+      description: `A delightful mash up of styles - the floral and citrus hoppy notes of an IPA and the coriander and orange peel associated with witbeers.  Pours pale and moderately hazy with a full white head.  A soft mouthfeel from a generous additon of Wheat malt make this IPA very approchable to a variety of beer lovers`,
+      likes: 2
     },
     {
       name: `Fest`,
@@ -217,7 +242,8 @@ const main = async () => {
       abv: '6.25%',
       ibu: '28',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `Opps! I dubbeled again!`,
@@ -225,7 +251,8 @@ const main = async () => {
       abv: '7.7%',
       ibu: '15',
       onTap: true,
-      description: `Brew got changed midway through from a pale ale to a Belgian style Dubbel.  Hence, the "oops".  We accidentally added dark roasted malt and decided to switch it to a Belgian Brown Ale with added sugar and a Belgian abbey yeast strain.`
+      description: `Brew got changed midway through from a pale ale to a Belgian style Dubbel.  Hence, the "oops".  We accidentally added dark roasted malt and decided to switch it to a Belgian Brown Ale with added sugar and a Belgian abbey yeast strain.`,
+      likes: 2
     },
     {
       name: `That's Not My Name`,
@@ -233,7 +260,8 @@ const main = async () => {
       abv: '5.5%',
       ibu: '30',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `It's a Nice Day For A Weiss Wedding`,
@@ -241,7 +269,8 @@ const main = async () => {
       abv: '3.4%',
       ibu: '6',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `Extra Special Belgian`,
@@ -249,7 +278,8 @@ const main = async () => {
       abv: '5%',
       ibu: '32',
       onTap: true,
-      description: `ESB fermented with a Belgian abbey yeast and dry hopped`
+      description: `ESB fermented with a Belgian abbey yeast and dry hopped`,
+      likes: 2
     },
     {
       name: `It'll be Gooder`,
@@ -257,7 +287,8 @@ const main = async () => {
       abv: '8%',
       ibu: '60',
       onTap: true,
-      description: `A follow up to "It'll Be Good" DIPA and earlier pilot beer.  This batch was double dry-hopped, once during fermentation and once after. Pale, wheat, oats, and a touch of munich for the malt bill and lots of juicy, fruity hops. Deceptively drinkable for a 8% beer`
+      description: `A follow up to "It'll Be Good" DIPA and earlier pilot beer.  This batch was double dry-hopped, once during fermentation and once after. Pale, wheat, oats, and a touch of munich for the malt bill and lots of juicy, fruity hops. Deceptively drinkable for a 8% beer`,
+      likes: 2
     },
     {
       name: `4 Non Blondes`,
@@ -265,7 +296,8 @@ const main = async () => {
       abv: '4.6%',
       ibu: '15',
       onTap: false,
-      description: ``
+      description: ``,
+      likes: 2
     },
     {
       name: `Grumpy Old Man`,
@@ -273,7 +305,8 @@ const main = async () => {
       abv: '%',
       ibu: '',
       onTap: true,
-      description: `Pours brown with red hues and good clarity.  Pronounced malt flavor with mild bitterness and a medium body.  This classic style goes down smooth.`
+      description: `Pours brown with red hues and good clarity.  Pronounced malt flavor with mild bitterness and a medium body.  This classic style goes down smooth.`,
+      likes: 2
     },
     {
       name: `Hot & Fresh`,
@@ -281,7 +314,8 @@ const main = async () => {
       abv: '5.5%',
       ibu: '25',
       onTap: true,
-      description: `Taste like a cinnamon bun! Features vanilla, brown sugar, and cinnamon in a brown ale`
+      description: `Taste like a cinnamon bun! Features vanilla, brown sugar, and cinnamon in a brown ale`,
+      likes: 2
     },
     {
       name: `Observatory`,
@@ -289,7 +323,8 @@ const main = async () => {
       abv: '5.2%',
       ibu: '31',
       onTap: false,
-      description: `Golden color with a slight haze and a fluffy white head. Bright, fresh hop character with honeydew melon, citrus, and floral notes. Moderate bitterness and a medium / light body.  An approachable pale ale.`
+      description: `Golden color with a slight haze and a fluffy white head. Bright, fresh hop character with honeydew melon, citrus, and floral notes. Moderate bitterness and a medium / light body.  An approachable pale ale.`,
+      likes: 2
     },
     {
       name: `Patchwork`,
@@ -297,7 +332,8 @@ const main = async () => {
       abv: '5.7%',
       ibu: '20',
       onTap: false,
-      description: `Beautiful orange brown color with a slight haze.  Uses a blend of Munich, pale, wheat, and dark crystal malt along with 8 lbs of pumpkin puree added to the mash.  Medium low bitterness with a pleasant spice and squash character.  The spice is a blend of cinnamon, nutmeg, and clove.  It's there without being over-powering.  A great fall beer.`
+      description: `Beautiful orange brown color with a slight haze.  Uses a blend of Munich, pale, wheat, and dark crystal malt along with 8 lbs of pumpkin puree added to the mash.  Medium low bitterness with a pleasant spice and squash character.  The spice is a blend of cinnamon, nutmeg, and clove.  It's there without being over-powering.  A great fall beer.`,
+      likes: 2
     }
   ];
   await Beer.insertMany(beers);

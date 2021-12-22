@@ -1,41 +1,52 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
-function SuggestBeer() {
-  // const handleSubmit = (e) => {
-  //   props.suggestBeer(e);
-  //   props.history.push('/beersbeersbeers');
-  // };
+function SuggestBeer(props) {
+  const [beerState, setBeerState] = useState();
+  const handleClick = (e) => {
+    e.preventDefault();
+    props.addBeer(e);
+    console.log('Working');
+    props.history.push('/beersbeersbeers');
+  };
 
-  const newBeer = props.newBeer;
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setBeerState(beerState);
+    // console.log(newBeer);
+    axios
+      .post('http://localhost:3001/api/beers', beerState)
+      .then((res) => {
+        console.log(res.data.beers);
+      })
+      .catch((error) => alert(error));
+  };
 
   return (
-    <div className="suggestBeer">
-      <h1>Suggestions welcome but no promises we'll listen</h1>
-      {/* <form onSubmit={newBeer}>
+    <div>
+      <h1>Suggest a beer!</h1>
+      <form onSubmit={handleSubmit}>
         <input
           type="text-area"
-          value={newBeer.name}
-          onChange={props.handleNewBeer}
+          onChange={props.addBeer}
           name={'name'}
-          placeholder={'Name'}
+          placeholder={'name'}
         />
         <input
           type="text-area"
-          value={newBeer.style}
-          onChange={props.handleNewBeer}
+          onChange=""
           name={'style'}
-          placeholder={'Style'}
+          placeholder={'style'}
         />
         <input
           type="text-area"
-          value={newBeer.description}
-          onChange={props.handleNewBeer}
+          onChange="{props.handleNewBeer}"
           name={'description'}
-          placeholder={'Description'}
+          placeholder={'description'}
         />
-        <button onClick={newBeer}>Submit</button>
-      </form> */}
+
+        <button onClick={handleSubmit}>Submit</button>
+      </form>
     </div>
   );
 }

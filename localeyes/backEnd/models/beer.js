@@ -7,8 +7,9 @@ const Beer = new Schema(
     style: { type: String, required: true },
     abv: { type: String, required: true },
     ibu: { type: String, required: false },
-    onTap: { type: Boolean, required: true },
-    description: { type: String, required: false }
+    onTap: { type: Boolean, required: false },
+    description: { type: String, required: false },
+    likes: { type: Number, required: false }
   },
   { timestamps: true }
 );
