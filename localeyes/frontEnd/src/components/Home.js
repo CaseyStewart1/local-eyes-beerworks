@@ -1,5 +1,5 @@
 import React from 'react';
-import blockLogo from './images/Local_block.jpeg';
+import blockLogo from './images/Local_block.png';
 import classicLogo from './images/Local_classic.jpeg';
 function Home() {
   return (

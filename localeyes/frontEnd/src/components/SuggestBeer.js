@@ -3,44 +3,51 @@ import axios from 'axios';
 
 function SuggestBeer(props) {
   const [beerState, setBeerState] = useState();
-  const handleClick = (e) => {
-    e.preventDefault();
-    props.addBeer(e);
-    console.log('Working');
-    props.history.push('/beersbeersbeers');
-  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setBeerState(beerState);
-    // console.log(newBeer);
-    axios
-      .post('http://localhost:3001/api/beers', beerState)
-      .then((res) => {
-        console.log(res.data.beers);
-      })
-      .catch((error) => alert(error));
+    console.log('hey');
+    axios.post('http://localhost:3001/api/beers', beerState);
+
+    console.log(beerState);
+    props.history.push('/beersbeersbeers');
   };
 
   return (
     <div>
       <h1>Suggest a beer!</h1>
-      <form onSubmit={handleSubmit}>
+      <form>
         <input
           type="text-area"
-          onChange={props.addBeer}
+          onChange={(e) => {
+            setBeerState({
+              ...beerState,
+              name: e.target.value
+            });
+          }}
           name={'name'}
           placeholder={'name'}
         />
         <input
           type="text-area"
-          onChange=""
+          onChange={(e) => {
+            setBeerState({
+              ...beerState,
+              style: e.target.value
+            });
+          }}
           name={'style'}
           placeholder={'style'}
         />
         <input
           type="text-area"
-          onChange="{props.handleNewBeer}"
+          onChange={(e) => {
+            setBeerState({
+              ...beerState,
+              decription: e.target.value
+            });
+          }}
           name={'description'}
           placeholder={'description'}
         />
