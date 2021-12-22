@@ -9,7 +9,7 @@ function BeerPage(props) {
   async function deleteBeer(id) {
     await axios.delete(`http://localhost:3001/api/beers/${id}`);
     setDel('Delete Done');
-    // windows.location.reload;
+    window.location.reload();
   }
   useEffect(() => {}, [deleteBeer]);
 
@@ -17,6 +17,9 @@ function BeerPage(props) {
     <div className="beerPage">
       <div className="beerCardContainer">
         <h1>Crispy Suds on Tap</h1>
+        <Link to="/suggestBeer">
+          <button>Suggest A beer</button>
+        </Link>
         {props.beers.map((beer) => (
           <div className="beerCard">
             <div className="titleRow">

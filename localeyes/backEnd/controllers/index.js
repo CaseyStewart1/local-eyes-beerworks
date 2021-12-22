@@ -1,6 +1,6 @@
 const Beer = require('../models/beer');
 
-const createBeer = async (req, res) => {
+const suggestBeer = async (req, res) => {
   try {
     const beer = await new Beer(req.body);
     await beer.save();
@@ -66,7 +66,7 @@ const deleteBeer = async (req, res) => {
 };
 
 module.exports = {
-  createBeer,
+  suggestBeer,
   getAllBeers,
   getBeerById,
   updateBeer,

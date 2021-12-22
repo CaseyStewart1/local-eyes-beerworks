@@ -9,6 +9,7 @@ import Find from './components/Find';
 import About from './components/About';
 import BeerPage from './components/BeerPage';
 import UpdateBeer from './components/UpdateBeer';
+import SuggestBeer from './components/SuggestBeer';
 
 function App() {
   // const beers = [
@@ -87,6 +88,11 @@ function App() {
           component={(props) => <BeerPage {...props} beers={beers} />}
         />
         <Route exact path="/visit" component={Find} />
+        <Route
+          exact
+          path="/suggestBeer"
+          component={(props) => <SuggestBeer {...props} beers={beers} />}
+        />
         <Route
           exact
           path="/updatebeer"
