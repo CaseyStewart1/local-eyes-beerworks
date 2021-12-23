@@ -6,10 +6,10 @@ function Home() {
     <div className="homePage">
       <div className="homeContainer">
         <div className="homeLogo">
-          <img src={classicLogo} alt="blockLogo" width="300px" />
+          <img src={classicLogo} alt="homeBlockLogo" width="300px" />
         </div>
-        <div className="blockOne">
-          <div className="leftColumn">
+        <div className="homeBlockOne">
+          <div className="homeLeftColumn">
             <h5>TAPROOM HOURS</h5>
             <h6>Monday || CLOSED</h6>
             <h6>Tuesday || 4 - 10pm</h6>
@@ -19,7 +19,7 @@ function Home() {
             <h6>Saturday || 4 - 10pm</h6>
             <h6>Sunday || 4 - 10pm</h6>
           </div>
-          <div className="rightColumn">
+          <div className="homeRightColumn">
             <h3>"The city shines from the light of local eyes"</h3>
             <p>
               Welcome to the neighborhood! We're passionate about building up

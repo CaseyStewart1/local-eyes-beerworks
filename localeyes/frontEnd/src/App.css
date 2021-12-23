@@ -45,7 +45,7 @@ header {
   text-align: left;
 }
 
-.bottomRow {
+.beerBottomRow {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -76,12 +76,12 @@ footer {
   margin: 2em;
 }
 
-.blockOne {
+.homeBlockOne {
   display: flex;
   flex-direction: row;
 }
 
-.rightColumn {
+.homeRightColumn {
   display: flex;
   flex-direction: column;
   width: 70%;
@@ -89,7 +89,7 @@ footer {
   margin: 2em;
 }
 
-.leftColumn {
+.homeLeftColumn {
   display: flex;
   flex-direction: column;
   margin: 2em;
