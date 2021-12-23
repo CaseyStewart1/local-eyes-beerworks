@@ -56,16 +56,6 @@ function BeerPage(props) {
             </div>
           </div>
         ))}
-
-        <div className="educationBP">
-          <h1>Tell me more about your Crispy Suds...</h1>
-          <div className="leftColumnBP">
-            <h2>Ales</h2>
-          </div>
-          <div className="rightColumnBP">
-            <h2>Lagers</h2>
-          </div>
-        </div>
       </div>
     </div>
   );

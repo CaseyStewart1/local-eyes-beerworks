@@ -9,6 +9,7 @@ function Nav() {
         <Link to="/about">About</Link>
         <Link to="/visit">Find Us</Link>
         <Link to="/beersbeersbeers">Beer</Link>
+        <Link to="/learn">Learn</Link>
       </div>
     </nav>
   );

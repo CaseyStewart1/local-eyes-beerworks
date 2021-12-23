@@ -10,63 +10,13 @@ import About from './components/About';
 import BeerPage from './components/BeerPage';
 import UpdateBeer from './components/UpdateBeer';
 import SuggestBeer from './components/SuggestBeer';
+import Learn from './components/Learn';
 
 import blockLogo from './components/images/Local_block.png';
 
 function App() {
-  // const beers = [
-  //   {
-  //     name: 'stumptown',
-  //     style: 'Pilsner',
-  //     description: 'Pour-over twee beard stumptown.',
-  //     img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.gettyimages.com%2Fvectors%2Fbeer-glass-icon-iweb-sign-symbol-logo-label-vector-id527900172%3Fb%3D1%26k%3D6%26m%3D527900172%26s%3D170x170%26h%3DMqOjCfcW3PXEwKbFfhI9pDQwhvPWMHQzQntxfJyceA8%3D&f=1&nofb=1',
-  //     abv: '5%',
-  //     ibu: '40'
-  //   },
-  //   {
-  //     name: 'subway tile',
-  //     style: 'IPA',
-  //     description: 'Gochujang scenester skateboard subway tile.',
-  //     img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.gettyimages.com%2Fvectors%2Fbeer-glass-icon-iweb-sign-symbol-logo-label-vector-id527900172%3Fb%3D1%26k%3D6%26m%3D527900172%26s%3D170x170%26h%3DMqOjCfcW3PXEwKbFfhI9pDQwhvPWMHQzQntxfJyceA8%3D&f=1&nofb=1',
-  //     abv: '5%',
-  //     ibu: '40'
-  //   },
-  //   {
-  //     name: 'Palo Santo',
-  //     style: 'DIPA',
-  //     description: 'jean shorts synth palo santo truffaut PBR&B',
-  //     img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.gettyimages.com%2Fvectors%2Fbeer-glass-icon-iweb-sign-symbol-logo-label-vector-id527900172%3Fb%3D1%26k%3D6%26m%3D527900172%26s%3D170x170%26h%3DMqOjCfcW3PXEwKbFfhI9pDQwhvPWMHQzQntxfJyceA8%3D&f=1&nofb=1',
-  //     abv: '7%',
-  //     ibu: '60'
-  //   },
-  //   {
-  //     name: 'Unsustainable meggings',
-  //     style: 'TIPA',
-  //     description: 'sustainable meggings YOLO jean shorts vice pop-up.',
-  //     img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.gettyimages.com%2Fvectors%2Fbeer-glass-icon-iweb-sign-symbol-logo-label-vector-id527900172%3Fb%3D1%26k%3D6%26m%3D527900172%26s%3D170x170%26h%3DMqOjCfcW3PXEwKbFfhI9pDQwhvPWMHQzQntxfJyceA8%3D&f=1&nofb=1',
-  //     abv: '9%',
-  //     ibu: '80'
-  //   },
-  //   {
-  //     name: 'Blue bottle',
-  //     style: 'Lager',
-  //     description: 'hell of a blue bottle master cleanse',
-  //     img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.gettyimages.com%2Fvectors%2Fbeer-glass-icon-iweb-sign-symbol-logo-label-vector-id527900172%3Fb%3D1%26k%3D6%26m%3D527900172%26s%3D170x170%26h%3DMqOjCfcW3PXEwKbFfhI9pDQwhvPWMHQzQntxfJyceA8%3D&f=1&nofb=1',
-  //     abv: '5%',
-  //     ibu: '40'
-  //   },
-  //   {
-  //     name: 'coloring book meditation',
-  //     style: 'Stout',
-  //     description:
-  //       'Pinterest coloring book meditation kickstarter authentic tacos squid. ',
-  //     img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.gettyimages.com%2Fvectors%2Fbeer-glass-icon-iweb-sign-symbol-logo-label-vector-id527900172%3Fb%3D1%26k%3D6%26m%3D527900172%26s%3D170x170%26h%3DMqOjCfcW3PXEwKbFfhI9pDQwhvPWMHQzQntxfJyceA8%3D&f=1&nofb=1',
-  //     abv: '6%',
-  //     ibu: '30'
-  //   }
-  // ];
   const [beers, setBeers] = useState([]);
-
+  const [styles, setStyles] = useState([]);
   const [beerData, setBeerData] = useState([]);
   const [newBeer, setNewBeer] = useState({
     name: '',
@@ -98,6 +48,16 @@ function App() {
     }
     getBeers();
   }, []);
+
+  useEffect(() => {
+    async function getStyles() {
+      const res = await axios.get(`http://localhost:3001/api/styles`);
+      console.log(res.data.styles);
+      setStyles(res.data.styles);
+    }
+    getStyles();
+  }, []);
+
   return (
     <div className="App">
       <header>
@@ -113,6 +73,11 @@ function App() {
           component={(props) => <BeerPage {...props} beers={beers} />}
         />
         <Route exact path="/visit" component={Find} />
+        <Route
+          exact
+          path="/learn"
+          component={(props) => <Learn {...props} styles={styles} />}
+        />
         <Route
           exact
           path="/suggestBeer"
