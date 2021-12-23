@@ -1,5 +1,5 @@
 const Beer = require('../models/beer');
-
+const Style = require('../models/style');
 const suggestBeer = async (req, res) => {
   try {
     console.log('hi');
@@ -17,6 +17,15 @@ const getAllBeers = async (req, res) => {
   try {
     const beers = await Beer.find();
     return res.status(200).json({ beers });
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
+
+const getAllStyles = async (req, res) => {
+  try {
+    const styles = await Style.find();
+    return res.status(200).json({ styles });
   } catch (error) {
     return res.status(500).send(error.message);
   }
@@ -70,6 +79,7 @@ const deleteBeer = async (req, res) => {
 module.exports = {
   suggestBeer,
   getAllBeers,
+  getAllStyles,
   getBeerById,
   updateBeer,
   deleteBeer

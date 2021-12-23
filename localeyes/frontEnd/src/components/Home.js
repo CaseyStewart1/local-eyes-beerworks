@@ -1,12 +1,12 @@
 import React from 'react';
 import blockLogo from './images/Local_block.png';
-import classicLogo from './images/Local_classic.jpeg';
+import classicLogo from './images/Local_classic.png';
 function Home() {
   return (
     <div className="homePage">
       <div className="homeContainer">
         <div className="homeLogo">
-          <img src={blockLogo} alt="blockLogo" width="600px" />
+          <img src={classicLogo} alt="blockLogo" width="300px" />
         </div>
         <div className="blockOne">
           <div className="leftColumn">

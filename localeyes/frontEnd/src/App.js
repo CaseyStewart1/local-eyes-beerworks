@@ -11,6 +11,8 @@ import BeerPage from './components/BeerPage';
 import UpdateBeer from './components/UpdateBeer';
 import SuggestBeer from './components/SuggestBeer';
 
+import blockLogo from './components/images/Local_block.png';
+
 function App() {
   // const beers = [
   //   {
@@ -96,10 +98,10 @@ function App() {
     }
     getBeers();
   }, []);
-
   return (
     <div className="App">
       <header>
+        <img src={blockLogo} alt="blockLogo" width="66%" />
         <NavGuide />
       </header>
       <main>
