@@ -22,7 +22,7 @@ function BeerPage(props) {
         </Link>
         {props.beers.map((beer) => (
           <div className="beerCard">
-            <div className="titleRow">
+            <div className="beerCardTitleRow">
               <div className="beerName">
                 <h3>{beer.name}</h3>
               </div>
@@ -30,7 +30,7 @@ function BeerPage(props) {
                 <p>{beer.style}</p>
               </div>
             </div>
-            <div className="descriptor">
+            <div className="beerDescriptor">
               <div className="beerImg">
                 <img src={beerGlass} alt={beer.name} height={'200px'} />
               </div>

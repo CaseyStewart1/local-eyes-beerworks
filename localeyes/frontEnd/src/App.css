@@ -30,14 +30,14 @@ header {
   margin: 2em;
 }
 
-.descriptor {
+.beerDescriptor {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   text-align: left;
 }
 
-.titleRow {
+.beerCardTitleRow {
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -149,6 +149,7 @@ footer {
   display: flex;
   flex-direction: column;
   margin-bottom: 5rem;
+  text-align: left;
 }
 
 .learnContainer {
@@ -158,4 +159,5 @@ footer {
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 2em;
+  text-align: left;
 }
