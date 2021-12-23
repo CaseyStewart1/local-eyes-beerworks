@@ -1,8 +1,4 @@
 import React from 'react';
-import beerGlass from './images/nounBeer.png';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import { useState, useEffect } from 'react';
 
 function Learn(props) {
   console.log(props.styles);

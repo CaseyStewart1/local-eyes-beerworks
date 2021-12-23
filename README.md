@@ -4,7 +4,7 @@
 
 ### By Casey Stewart
 
-#### [LinkedIn](www.linkedin.com/caseystewart22) [Behance](https://www.behance.net/CaseyStewart) [GitHub](www.github.com/CaseyStewart1)
+#### [LinkedIn](https://www.linkedin.com/in/caseystewart22/) [Behance](https://www.behance.net/CaseyStewart) [GitHub](https://github.com/CaseyStewart1)
 
 #### [Trello](https://trello.com/b/DokFStrv/local-eyes-beerworks)
 

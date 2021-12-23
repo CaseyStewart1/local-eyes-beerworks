@@ -38,7 +38,7 @@ function BeerPage(props) {
                 <p>{beer.description}</p>
               </div>
             </div>
-            <div className="bottomRow">
+            <div className="beerBottomRow">
               <span>
                 <h6>ABV</h6>
                 <p>{beer.abv}</p>
