@@ -32,18 +32,30 @@
 
 ![Local Eyes ERD](./screengrabs/localEyesERD.jpg)
 
+##### Homepage:
+
+![Local Eyes ERD](./screengrabs/homePage.jpg)
+
+##### Beerlist:
+
+![Local Eyes ERD](./screengrabs/beerList.jpg)
+
+##### BeerStyle:
+
+![Local Eyes ERD](./screengrabs/beerStyles.jpg)
+
 ---
 
 **_*Technologies Used*_**
 
-- Tech 1
-- Tech 2
-  - sub-item 1
-  - sub-item 2
-- Tech 3
+- VsCode, JS, React, CSS, GitHub, MongoDB, Express
 
 ---
 
-#### **Great More Star Wars**
+#### **CREDITS**
+
+-beer definitions - beeradvocate.com
+-Beer Icon: Icons Producer - The noun project
+-All Branding is my own
 
 ---
