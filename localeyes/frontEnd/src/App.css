@@ -101,18 +101,15 @@ footer {
   align-items: center;
 }
 
-.aboutTop {
-  margin: 2em;
-}
-
 .footer {
   background-color: rgb(63, 59, 58);
 }
 
 .aboutTop {
-  width: 70%;
-  margin: 2em;
   background-color: rgba(255, 255, 255, 0.7);
+  padding: 5%;
+  justify-content: space-around;
+  margin: 2em;
 }
 
 .learnPage {
