@@ -124,7 +124,9 @@ function App() {
           component={(props) => <UpdateBeer {...props} beers={beers} />}
         />
       </main>
-      <footer></footer>
+      <footer>
+        <div className="footer"></div>
+      </footer>
     </div>
   );
 }

@@ -16,7 +16,6 @@ function About() {
           fingerstache. Dummy text? More like dummy thicc text, amirite?
         </p>
       </div>
-      <img src={classicLogo} width="300px" />
     </div>
   );
 }
